@@ -6,8 +6,24 @@
   box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button{
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
 img {
   max-width: 100%;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 html {
@@ -15,7 +31,41 @@ html {
 }
 
 body {
-  font-size: 1.6rem;
   box-sizing: inherit;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
   font-family: 'Jost', sans-serif;
+  background-color: var(--background-color);
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+:root {
+  --background-color: hsl(228, 9%, 11%);
+  --text-color: hsl(0, 0%, 100%);
+  --primary: hsl(3, 100%, 61%);
+  --secondary: hsl(225, 73%, 57%);
+  --cta-color: hsl(52, 100%, 50%);
+  --html-color: hsl(12, 77%, 52%);
+  --css-color: hsl(228, 78%, 52%);
+  --js-color: hsl(52, 84%, 63%);
+  --tailwind-color: hsl(189, 94%, 43%);
+  --react-color: hsl(193, 95%, 68%);
+  --nodejs-color: hsl(89, 53%, 54%);
+  --sass-color: hsl(330, 50%, 60%);
+  --ts-color: hsl(204, 100%, 40%);
+  --next-color: hsl(0, 0%, 0%);
+  --dart-color: hsl(204, 99%, 38%);
+  --git-color: hsl(9, 86%, 57%);
+  --flutter-color: hsl(193, 77%, 50%);
+  --mongodb-color: hsl(121, 39%, 46%);
 }

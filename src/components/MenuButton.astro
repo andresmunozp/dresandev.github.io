@@ -1,0 +1,38 @@
+<button class="menu-btn">
+  <span class="menu-btn__line menu-btn__line--top"></span>
+  <span class="menu-btn__line menu-btn__line--middle"></span>
+  <span class="menu-btn__line menu-btn__line--bottom"></span>
+</button>
+
+<style>
+  .menu-btn {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 4rem;
+    height: 3rem;
+  }
+
+  .menu-btn__line {
+    height: 0.5rem;
+    background-color: var(--text-color);
+    border-radius: 0.5rem;
+    transition: cubic-bezier(0.68, -0.6, 0.32, 1.6) 0.4s;
+  }
+
+  .menu-btn__line--top {
+    width: 50%;
+  }
+
+  .menu-btn__line--middle {
+    width: 100%;
+  }
+
+  .menu-btn__line--bottom {
+    width: 75%;
+  }
+
+  .menu-btn:hover .menu-btn__line {
+    width: 100%;
+  }
+</style>
