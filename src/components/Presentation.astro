@@ -1,0 +1,45 @@
+---
+import Links from "./Links.astro";
+---
+
+<section class="presentation">
+  <div class="presentation__container">
+    <div class="presentation__name">JAVIER ANDRES</div>
+    <h1 class="presentation__title">Frontend Developer</h1>
+    <p class="presentation__description">
+      Hi, I'm Andres, a software developer focused on the frontend, specifically
+      on web technologies, based in Colmbia. My mission is to create solutions
+      that adapt to the needs of users and clients.
+    </p>
+  </div>
+
+  <Links />
+</section>
+
+<style>
+  .presentation__container {
+    padding-block: 10rem;
+  }
+
+  .presentation__name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+
+  .presentation__title {
+    width: fit-content;
+    position: relative;
+    font-size: 3.4rem;
+    font-weight: bold;
+  }
+  .presentation__title::after {
+    position: absolute;
+    right: -1rem;
+    bottom: 1.3rem;
+    height: 0.6rem;
+    width: 0.6rem;
+    background-color: var(--primary-color);
+    border-radius: 5rem;
+  }
+</style>

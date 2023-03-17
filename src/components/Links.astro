@@ -1,0 +1,47 @@
+---
+import email from "../assets/icons/email.svg";
+import github from "../assets/icons/github.svg";
+import linkedin from "../assets/icons/linkedin.svg";
+---
+
+<div class="links-container">
+  <div class="links-container__scrolldown">SCROLLDOWN</div>
+
+  <div class="links-container__links links">
+    <a href="#">
+      <img src={email} alt="email icon" />
+    </a>
+    <a href="#">
+      <img src={linkedin} alt="linkedin icon" />
+    </a>
+    <a href="#">
+      <img src={github} alt="github icon" />
+    </a>
+  </div>
+</div>
+
+<style>
+  .links-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .links-container__scrolldown {
+    position: absolute;
+    left: -4rem;
+    bottom: 4.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.16rem;
+    transform: rotate(90deg);
+  }
+
+  .links {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+</style>
