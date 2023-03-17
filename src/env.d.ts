@@ -1,1 +1,1 @@
-import 'react-scripts'
+/// <reference types="astro/client" />
