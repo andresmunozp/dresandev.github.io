@@ -1,0 +1,75 @@
+<form class="form">
+  <input
+    class="form__input"
+    type="text"
+    name="name"
+    placeholder="Name"
+    autocomplete="off"
+  />
+  <div class="input-border"></div>
+
+  <input
+    class="form__input"
+    type="email"
+    name="email"
+    placeholder="Email"
+    autocomplete="off"
+  />
+  <div class="input-border"></div>
+
+  <textarea
+    class="form__text-area"
+    rows="8"
+    name="message"
+    placeholder="Message"></textarea>
+
+  <input class="form__submit" type="submit" value="Submit" />
+</form>
+
+<style>
+  .form__input {
+    width: 100%;
+    padding-left: 1rem;
+  }
+
+  .form__text-area {
+    padding: 1rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    border: 0.3rem solid var(--gray-color);
+    resize: none;
+    transition: border-color 0.3s ease-in-out;
+  }
+
+  .form__submit {
+    margin: 5rem auto;
+    padding: 1.2rem 5rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+    border: 0.2rem solid var(--secondary-color);
+    border-radius: 0.5rem;
+    background-color: var(--secondary-color-transparent);
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .form__submit:focus {
+    background-color: var(--secondary-color);
+  }
+
+  .input-border {
+    margin-block: 1rem 3rem;
+    width: 100%;
+    height: 0.3rem;
+    background-color: var(--gray-color);
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .form__input:focus + .input-border {
+    background-color: var(--secondary-color);
+  }
+
+  .form__text-area:focus {
+    border: 0.3rem solid var(--secondary-color);
+  }
+</style>
