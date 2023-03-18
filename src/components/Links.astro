@@ -1,47 +1,35 @@
 ---
-import email from "../assets/icons/email.svg";
-import github from "../assets/icons/github.svg";
-import linkedin from "../assets/icons/linkedin.svg";
+import LinkIcon from "./LinkIcon.astro";
 ---
 
-<div class="links-container">
-  <div class="links-container__scrolldown">SCROLLDOWN</div>
-
-  <div class="links-container__links links">
-    <a href="#">
-      <img src={email} alt="email icon" />
+<ul class="links">
+  <li>
+    <a class="links__link" href="#">
+      <LinkIcon /> Gihub
     </a>
-    <a href="#">
-      <img src={linkedin} alt="linkedin icon" />
+  </li>
+  <li>
+    <a class="links__link" href="#">
+      <LinkIcon /> Email
     </a>
-    <a href="#">
-      <img src={github} alt="github icon" />
+  </li>
+  <li>
+    <a class="links__link" href="#">
+      <LinkIcon /> Linkedin
     </a>
-  </div>
-</div>
+  </li>
+</ul>
 
 <style>
-  .links-container {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .links-container__scrolldown {
-    position: absolute;
-    left: -4rem;
-    bottom: 4.5rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    letter-spacing: 0.16rem;
-    transform: rotate(90deg);
-  }
-
   .links {
-    margin-left: auto;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .links__link {
+    display: flex;
+    align-items: center;
     gap: 1rem;
   }
 </style>

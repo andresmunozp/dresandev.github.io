@@ -11,17 +11,6 @@
   padding: 0;
 }
 
-button {
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
 html,
 body {
   height: 100%;
@@ -37,7 +26,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: 'Jost', sans-serif;
-  background: url(../images/background.png) no-repeat fixed;
+  background: var(--background-color) no-repeat fixed;
   background-size: cover;
   color: var(--text-color);
   padding: 2.5rem;
@@ -53,11 +42,49 @@ h6 {
   overflow-wrap: break-word;
 }
 
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+textarea {
+  display: block;
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--gray-color);
+}
+
 :root {
   --background-color: hsl(228, 9%, 11%);
   --text-color: hsl(0, 0%, 100%);
   --primary-color: hsl(3, 100%, 61%);
   --secondary-color: hsl(225, 73%, 57%);
+  --secondary-color-transparent: hsla(225, 73%, 57%, 0.3);
   --secondary-variation-color: hsl(210, 100%, 50%)F;
   --cta-color: hsl(52, 100%, 50%);
+  --gray-color: hsl(0, 0%, 82%);
 }
