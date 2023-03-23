@@ -1,4 +1,9 @@
-const technologies = [
+interface Technology {
+  name: string
+  color: string
+}
+
+const technologies: Technology[] = [
   {
     name: 'HTML',
     color: '#E34C26'

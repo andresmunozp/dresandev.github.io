@@ -1,0 +1,29 @@
+.slider-image {
+  width: 100%;
+  user-select: none;
+}
+
+.slider-flex-container {
+  margin-top: 2rem;
+  padding: 0 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.slider-index {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.slider-description {
+  flex-basis: 70%;
+  font-weight: 300;
+}
+
+.slider-links {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}

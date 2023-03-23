@@ -23,7 +23,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: 'Jost', sans-serif;
   color: var(--text-color);
-  background: var(--background-color) no-repeat fixed;
+  background: var(--background-color) url(../images/background.jpg) no-repeat fixed;
   background-size: cover;
 }
 
