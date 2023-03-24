@@ -5,19 +5,19 @@
 
 .slider-flex-container {
   margin-top: 2rem;
-  padding: 0 2rem;
   display: flex;
   gap: 1rem;
 }
 
 .slider-index {
-  font-size: 1.5rem;
-  font-weight: 500;
+  color: var(--green-color);
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 .slider-description {
-  flex-basis: 70%;
-  font-weight: 300;
+  flex-basis: 75%;
+  font-size: 1.6rem;
 }
 
 .slider-links {

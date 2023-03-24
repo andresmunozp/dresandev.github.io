@@ -7,6 +7,7 @@ import type { SwiperProps } from 'swiper/react'
 import SliderItem from './SliderItem'
 
 import 'swiper/css'
+import './Slider.css'
 
 import projects from '../../data/projects'
 

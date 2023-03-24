@@ -1,9 +1,11 @@
 ---
+import H2Heading from "./H2Heading.astro";
+
 import technologies from "../data/technologies";
 ---
 
 <section class="skills">
-  <h2 class="skills__title title">Skills</h2>
+  <H2Heading title="Skills" />
   <p class="skills__description">
     These are some of the technologies that use soil most frequently to create
     projects However, I am a big fan of web technologies in general and I
@@ -11,36 +13,33 @@ import technologies from "../data/technologies";
     learning from them.
   </p>
 
-  <div class="skills__technologies technologies">
+  <ul class="skills__ul">
     {
-      technologies.map((technology): void => {
-        const style = `color: ${technology.color};
-        filter: drop-shadow(0px 0px 15px ${technology.color}50);`;
-
-        return (
-          <h3 class="technologies__technology" style={style}>
-            {technology.name}
-          </h3>
-        );
-      })
+      technologies.map((technology) => (
+        <li class="skills__li">
+          <span class="skills__text">🔹{technology}</span>
+        </li>
+      ))
     }
-  </div>
+  </ul>
 </section>
 
 <style>
   .skills__description {
-    margin-bottom: 5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
-  .technologies {
+  .skills__ul {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem 1.3rem;
+    gap: 2rem;
+    padding-bottom: 3rem;
   }
 
-  .technologies__technology {
+  .skills__text {
     font-size: 2rem;
-    font-weight: 900;
+    font-weight: 700;
     letter-spacing: 0.2em;
   }
 </style>
