@@ -1,0 +1,50 @@
+---
+import { Logo, CloseButton } from "./";
+---
+
+<div class="menu">
+  <div class="menu__header">
+    <Logo />
+    <CloseButton />
+  </div>
+  <div class="divider"></div>
+</div>
+
+<style>
+  .menu {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    padding: 2.5rem;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    background: var(--background-color) url(../assets/images/background.jpg)
+      no-repeat fixed;
+    background-size: cover;
+    transform: translateY(calc(-100% - 1rem));
+    border-bottom: 1rem solid var(--primary-color);
+    transition: transform 1s ease-in-out;
+  }
+  .menu--active {
+    transform: translateY(1rem);
+  }
+
+  .menu__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 2.5rem;
+    width: 100%;
+    height: max-content;
+    /* border-bottom: 0.2rem solid var(--gray-color-transparent); */
+  }
+
+  .diver {
+    margin-right: 2.5rem;
+    margin-left: 2.5rem;
+    width: 100%;
+    height: 0.2rem;
+    background-color: var(--gray-color-transparent);
+  }
+</style>

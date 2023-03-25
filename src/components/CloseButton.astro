@@ -1,0 +1,41 @@
+<div class="close-btn">
+  <span class="close-btn__line close-btn__line--top"></span>
+  <span class="close-btn__line close-btn__line--bottom"></span>
+</div>
+
+<style>
+  .close-btn {
+    position: relative;
+    top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 4rem;
+    height: 3rem;
+  }
+
+  .close-btn__line {
+    position: absolute;
+    width: 100%;
+    height: 0.5rem;
+    background-color: var(--text-color);
+    border-radius: 0.1rem;
+  }
+
+  .close-btn__line--top {
+    transform: rotate(45deg);
+  }
+
+  .close-btn__line--bottom {
+    transform: rotate(-45deg);
+  }
+</style>
+
+<script>
+  const menu = document.querySelector(".menu")!;
+  const closeBtn = document.querySelector(".close-btn")!;
+
+  closeBtn.addEventListener("click", () =>
+    menu.classList.remove("menu--active")
+  );
+</script>

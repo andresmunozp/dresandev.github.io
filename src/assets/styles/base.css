@@ -77,8 +77,8 @@ textarea::placeholder {
   --background-color: hsl(228, 9%, 11%);
   --text-color: hsl(0, 0%, 100%);
   --primary-color: hsl(3, 100%, 61%);
+  --primary-color-transparent: hsla(3, 100%, 61%, 0.3);
   --secondary-color: hsl(225, 73%, 57%);
-  --secondary-color-transparent: hsla(225, 73%, 57%, 0.3);
   --secondary-variation-color: hsl(210, 100%, 50%)F;
   --cta-color: hsl(52, 100%, 50%);
   --green-color: hsl(120, 73%, 75%);

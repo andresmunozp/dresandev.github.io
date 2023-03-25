@@ -1,4 +1,6 @@
 import Logo from './Logo.astro'
+import Menu from './Menu.astro'
+import CloseButton from './CloseButton.astro'
 import MenuButton from './MenuButton.astro'
 import Header from './Header.astro'
 import Main from './Main.astro'
@@ -14,7 +16,9 @@ import LinkIcon from './LinkIcon.astro'
 
 export {
   Logo,
+  Menu,
   MenuButton,
+  CloseButton,
   Header,
   Main,
   H2Heading,
