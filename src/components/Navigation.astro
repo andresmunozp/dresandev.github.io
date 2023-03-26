@@ -1,0 +1,42 @@
+<nav class="nav">
+  <ul class="nav__links links">
+    <li>
+      <a class="links__link" href="/">Home</a>
+    </li>
+    <li>
+      <a class="links__link" href="#skills">Skills</a>
+    </li>
+    <li>
+      <a class="links__link" href="#projects">Projects</a>
+    </li>
+    <li>
+      <a class="links__link" href="#contact">Contact</a>
+    </li>
+  </ul>
+</nav>
+
+<style>
+  .nav__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 3.5rem;
+  }
+
+  .links__link {
+    font-weight: 600;
+  }
+</style>
+
+<script>
+  const optionsLinks = document.querySelectorAll(".links__link");
+  const menu = document.querySelector(".menu")!;
+
+  optionsLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("menu--active");
+    });
+  });
+</script>

@@ -11,6 +11,19 @@
   padding: 0;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation: none !important;
+    animation: none !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+
+  html {
+    scroll-behavior: auto !important;
+  }
+}
+
 html {
   font-size: 62.5%;
 }
@@ -25,6 +38,12 @@ body {
   color: var(--text-color);
   background: var(--background-color) url(../images/background.jpg) no-repeat fixed;
   background-size: cover;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 p,
@@ -41,6 +60,8 @@ button {
   border: none;
   background: none;
   cursor: pointer;
+  font: inherit;
+  color: inherit;
 }
 
 a {
@@ -64,7 +85,7 @@ textarea {
   outline: none;
   background: none;
   font-family: inherit;
-  font-size: inherit;
+  font-size: 1.8rem;
   color: inherit;
 }
 
@@ -80,8 +101,12 @@ textarea::placeholder {
   --primary-color-transparent: hsla(3, 100%, 61%, 0.3);
   --secondary-color: hsl(225, 73%, 57%);
   --secondary-variation-color: hsl(210, 100%, 50%)F;
-  --cta-color: hsl(52, 100%, 50%);
+  --yellow-color: hsl(52, 100%, 50%);
   --green-color: hsl(120, 73%, 75%);
   --gray-color: hsl(0, 0%, 78%);
   --gray-color-transparent: hsla(0, 0%, 78%, 0.1);
+}
+
+.no-scroll {
+  overflow: hidden;
 }

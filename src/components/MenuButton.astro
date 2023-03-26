@@ -42,5 +42,8 @@
   const menu = document.querySelector(".menu")!;
   const menuBtn = document.querySelector(".menu-btn")!;
 
-  menuBtn.addEventListener("click", () => menu.classList.add("menu--active"));
+  menuBtn.addEventListener("click", () => {
+    menu.classList.add("menu--active");
+    document.body.classList.add("no-scroll");
+  });
 </script>

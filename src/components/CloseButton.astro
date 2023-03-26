@@ -1,12 +1,11 @@
-<div class="close-btn">
+<button class="close-btn">
   <span class="close-btn__line close-btn__line--top"></span>
   <span class="close-btn__line close-btn__line--bottom"></span>
-</div>
+</button>
 
 <style>
   .close-btn {
     position: relative;
-    top: 1rem;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -16,6 +15,7 @@
 
   .close-btn__line {
     position: absolute;
+    top: 1.2rem;
     width: 100%;
     height: 0.5rem;
     background-color: var(--text-color);
@@ -35,7 +35,8 @@
   const menu = document.querySelector(".menu")!;
   const closeBtn = document.querySelector(".close-btn")!;
 
-  closeBtn.addEventListener("click", () =>
-    menu.classList.remove("menu--active")
-  );
+  closeBtn.addEventListener("click", () => {
+    menu.classList.remove("menu--active");
+    document.body.classList.remove("no-scroll");
+  });
 </script>

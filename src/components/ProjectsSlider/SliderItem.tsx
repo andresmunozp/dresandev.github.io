@@ -28,7 +28,7 @@ const githubIcon = (
 const SliderItem: FC<SliderItemProps> = ({ index, image, description }) => {
   return (
     <>
-      <img className="slider-image" src={image} alt="Project image" />
+      <img className="slider-image" src={image} alt="Project image" loading="lazy" />
       <div className="slider-flex-container">
         <span className="slider-index">{index} /</span>
         <p className="slider-description">{description}</p>
