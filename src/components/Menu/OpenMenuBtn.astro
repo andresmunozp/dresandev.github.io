@@ -1,4 +1,4 @@
-<button class="menu-btn">
+<button class="menu-btn" aria-label="open menu" title="Open menu">
   <span class="menu-btn__line menu-btn__line--top"></span>
   <span class="menu-btn__line menu-btn__line--middle"></span>
   <span class="menu-btn__line menu-btn__line--bottom"></span>
@@ -6,6 +6,10 @@
 
 <style>
   .menu-btn {
+    position: fixed;
+    top: 2.5rem;
+    right: 2.5rem;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -37,13 +41,3 @@
     width: 100%;
   }
 </style>
-
-<script>
-  const menu = document.querySelector(".menu")!;
-  const menuBtn = document.querySelector(".menu-btn")!;
-
-  menuBtn.addEventListener("click", () => {
-    menu.classList.add("menu--active");
-    document.body.classList.add("no-scroll");
-  });
-</script>

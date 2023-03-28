@@ -28,14 +28,31 @@ const githubIcon = (
 const SliderItem: FC<SliderItemProps> = ({ index, image, description }) => {
   return (
     <>
-      <img className="slider-image" src={image} alt="Project image" loading="lazy" />
-      <div className="slider-flex-container">
-        <span className="slider-index">{index} /</span>
-        <p className="slider-description">{description}</p>
+      <img
+        className="slider__image"
+        src={image}
+        alt="Project image"
+        loading="lazy"
+      />
 
-        <div className="slider-links">
-          <a className="slider-link" href="#">{linkIcon}</a>
-          <a className="slider-link" href="#">{githubIcon}</a>
+      <div className="slider__info info">
+        <span className="info__index">{index} /</span>
+        <p className="info__description">{description}</p>
+
+        <div className="info__links">
+          <a
+            aria-label="Go to live preview"
+            title="Live preview"
+            className="slider-link"
+            href="#"
+          >{linkIcon}</a>
+
+          <a
+            aria-label="Go to source code"
+            title="Source code"
+            className="slider-link"
+            href="#"
+          >{githubIcon}</a>
         </div>
       </div>
     </>

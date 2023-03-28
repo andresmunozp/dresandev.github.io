@@ -1,4 +1,6 @@
 ---
+import "./../assets/styles/base.css";
+
 import Layout from "../layouts/Layout.astro";
 
 import { Header, Main } from "../components/";
@@ -8,3 +10,44 @@ import { Header, Main } from "../components/";
   <Header />
   <Main />
 </Layout>
+
+<script>
+  const menu = document.querySelector(".menu")!;
+  const menuBtn = document.querySelector(".menu-btn")!;
+  const closeBtn = document.querySelector(".close-btn")!;
+  const optionsLinks = document.querySelectorAll(".links__link");
+  const bodyStyle = document.body.style;
+
+  let scrollY = 0;
+
+  const openMenu = () => {
+    menu.classList.add("menu--active");
+
+    scrollY = window.scrollY;
+
+    bodyStyle.overflow = `hidden`;
+    bodyStyle.position = `fixed`;
+    bodyStyle.width = `100%`;
+    bodyStyle.height = `calc(100% + ${scrollY}px)`;
+    bodyStyle.top = `-${scrollY}px`;
+  };
+
+  const closeMenu = () => {
+    bodyStyle.removeProperty("overflow");
+    bodyStyle.removeProperty("position");
+    bodyStyle.removeProperty("width");
+    bodyStyle.removeProperty("height");
+    bodyStyle.removeProperty("top");
+
+    menu.classList.remove("menu--active");
+    window.scrollTo(0, scrollY);
+  };
+
+  menuBtn.addEventListener("click", openMenu);
+
+  closeBtn.addEventListener("click", closeMenu);
+
+  optionsLinks.forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+</script>

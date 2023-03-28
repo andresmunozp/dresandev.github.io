@@ -30,6 +30,7 @@
   .form {
     padding: 5rem 0;
   }
+
   .form__input {
     width: 100%;
     padding-left: 1rem;
@@ -50,13 +51,14 @@
     font-size: 1.8rem;
     font-weight: 600;
     border: 0.2rem solid var(--primary-color);
-    border-radius: 0.5rem;
+    border-radius: 0.3rem;
     color: #000;
     background-color: var(--primary-color);
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 
-  .form__submit:focus {
+  .form__submit:focus,
+  .form__submit:active {
     color: var(--white-color);
     background-color: var(--primary-color-transparent);
   }

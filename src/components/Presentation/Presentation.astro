@@ -1,10 +1,10 @@
 ---
-import TimeAndYear from "./TimeAndYear.astro";
+import { TimeAndYear, CVButton } from "../UI/";
 ---
 
 <section class="presentation">
   <div class="presentation__container">
-    <div class="presentation__name">JAVIER ANDRES</div>
+    <div class="presentation__name">JAVIER ANDRES / DRESAN</div>
     <h1 class="presentation__title">Frontend Developer</h1>
     <p class="presentation__description">
       Hi, I'm Andres, a software developer focused on the frontend, specifically
@@ -13,16 +13,18 @@ import TimeAndYear from "./TimeAndYear.astro";
     </p>
   </div>
 
+  <CVButton />
   <TimeAndYear />
 </section>
 
 <style>
   .presentation__container {
-    padding-block: 8rem;
+    padding-top: 2.5rem;
+    padding-bottom: 5rem;
   }
 
   .presentation__name {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 600;
     color: var(--primary-color);
   }

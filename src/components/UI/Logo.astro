@@ -1,0 +1,17 @@
+---
+import { logo, logoMobile } from "../../assets/icons/";
+---
+
+<a href="/" aria-label="Go home">
+  <picture>
+    <source srcset={logo} media="(min-width: 724px)" />
+    <img class="logo" src={logoMobile} alt="dresan logo" />
+  </picture>
+</a>
+
+<style>
+  .logo {
+    width: 100%;
+    height: 100%;
+  }
+</style>

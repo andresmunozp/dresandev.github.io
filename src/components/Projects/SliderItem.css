@@ -1,26 +1,31 @@
-.slider-image {
+.slider__image {
+  height: 100%;
   width: 100%;
   user-select: none;
 }
 
-.slider-flex-container {
+.slider__info {
   margin-top: 2rem;
   display: flex;
   gap: 1rem;
 }
 
-.slider-index {
-  color: var(--green-color);
+.info__index {
   font-size: 1.6rem;
   font-weight: 700;
+  transition: color 0.3s ease;
 }
 
-.slider-description {
+.swiper-slide-active .info__index {
+  color: var(--yellow-color);
+}
+
+.info__description {
   flex-basis: 75%;
   font-size: 1.6rem;
 }
 
-.slider-links {
+.info__links {
   margin-left: auto;
   display: flex;
   flex-direction: column;

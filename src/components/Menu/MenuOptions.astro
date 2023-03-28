@@ -1,5 +1,8 @@
 <div class="options">
-  <button>
+  <button
+    aria-label="open accesibility options"
+    title="Accesibility options"
+  >
     <svg
       class="options__icon"
       width="40"
@@ -16,15 +19,25 @@
 
   <ul class="language">
     <li>
-      <button class="language__option">ES</button>
+      <button
+        aria-label="select spanish language"
+        title="Spanish language"
+        class="language__option">ES &nbsp;-&nbsp;</button
+      >
     </li>
-    &nbsp;-&nbsp;
     <li>
-      <button class="language__option language__option--selected">EN</button>
+      <button
+        aria-label="select spanish language"
+        title="Spanish language"
+        class="language__option language__option--selected">EN</button
+      >
     </li>
   </ul>
 
-  <button>
+  <button
+    aria-label="turn off sound"
+    title="Turn off sound"
+  >
     <svg
       class="options__icon"
       width="40"
@@ -63,6 +76,6 @@
   }
 
   .language__option--selected {
-    color: var(--yellow-color)
+    color: var(--yellow-color);
   }
 </style>

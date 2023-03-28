@@ -1,16 +1,5 @@
 @import './fonts.css';
 
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-}
-
 @media (prefers-reduced-motion: reduce) {
   * {
     -webkit-animation: none !important;
@@ -26,6 +15,23 @@
 
 html {
   font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
 }
 
 body {
@@ -36,14 +42,9 @@ body {
   -webkit-font-smoothing: antialiased;
   font-family: 'Poppins', sans-serif;
   color: var(--text-color);
-  background: var(--background-color) url(../images/background.jpg) no-repeat fixed;
+  background: var(--background-color) url(../images/bg.webp) no-repeat fixed;
   background-size: cover;
   scroll-behavior: smooth;
-}
-
-html,
-body {
-  height: 100%;
 }
 
 p,
@@ -105,8 +106,4 @@ textarea::placeholder {
   --green-color: hsl(120, 73%, 75%);
   --gray-color: hsl(0, 0%, 78%);
   --gray-color-transparent: hsla(0, 0%, 78%, 0.1);
-}
-
-.no-scroll {
-  overflow: hidden;
 }

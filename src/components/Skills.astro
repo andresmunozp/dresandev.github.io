@@ -1,5 +1,5 @@
 ---
-import H2Heading from "./H2Heading.astro";
+import { H2Heading } from "./UI/";
 
 import technologies from "../data/technologies";
 ---
@@ -17,7 +17,7 @@ import technologies from "../data/technologies";
     {
       technologies.map((technology) => (
         <li class="skills__li">
-          <span class="skills__text">🔹{technology}</span>
+          <span class="skills__text">〽 {technology}</span>
         </li>
       ))
     }

@@ -1,18 +1,19 @@
 ---
-import { Logo, MenuButton, Menu } from "./";
+import { Logo } from "./UI/";
+import { Menu, OpenMenuBtn } from "./Menu";
 ---
 
 <header class="header">
   <Logo />
+  <OpenMenuBtn />
   <Menu />
-  <MenuButton />
 </header>
 
 <style>
   .header {
-    padding-top: 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2.5rem 0;
   }
 </style>

@@ -29,14 +29,3 @@
     font-weight: 600;
   }
 </style>
-
-<script>
-  const optionsLinks = document.querySelectorAll(".links__link");
-  const menu = document.querySelector(".menu")!;
-
-  optionsLinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      menu.classList.remove("menu--active");
-    });
-  });
-</script>

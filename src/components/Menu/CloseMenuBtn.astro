@@ -1,4 +1,4 @@
-<button class="close-btn">
+<button aria-label="close menu" title="close menu" class="close-btn">
   <span class="close-btn__line close-btn__line--top"></span>
   <span class="close-btn__line close-btn__line--bottom"></span>
 </button>
@@ -15,9 +15,9 @@
 
   .close-btn__line {
     position: absolute;
-    top: 1.2rem;
+    top: 1.3rem;
     width: 100%;
-    height: 0.5rem;
+    height: 0.4rem;
     background-color: var(--text-color);
     border-radius: 0.1rem;
   }
@@ -30,13 +30,3 @@
     transform: rotate(-45deg);
   }
 </style>
-
-<script>
-  const menu = document.querySelector(".menu")!;
-  const closeBtn = document.querySelector(".close-btn")!;
-
-  closeBtn.addEventListener("click", () => {
-    menu.classList.remove("menu--active");
-    document.body.classList.remove("no-scroll");
-  });
-</script>
