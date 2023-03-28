@@ -1,6 +1,6 @@
 <div class="container">
-  <span class="container__time">CO 22:10</span>
-  <span class="container__year">2023</span>
+  <span class="container__time"></span>
+  <span class="container__year"></span>
 </div>
 
 <style>
@@ -9,3 +9,37 @@
     justify-content: space-between;
   }
 </style>
+
+<script>
+  import type { DateTimeFormatOptions } from "intl";
+
+  const timeSpan = document.querySelector(".container__time")!;
+  const yearSpan = document.querySelector(".container__year")!;
+
+  const dateTimeOptions: DateTimeFormatOptions = {
+    timeZone: "America/Bogota",
+    hour: "numeric",
+    minute: "numeric",
+    hour12: false,
+  };
+
+  const getCurrentTime = () => {
+    const now = new Date().toLocaleString("es-CO", dateTimeOptions);
+    return `CO ${now}`;
+  };
+
+  const setCurrentTime = () => {
+    timeSpan.textContent = getCurrentTime();
+  };
+
+  const setCurrentYear = () => {
+    yearSpan.textContent = new Date().getFullYear().toString();
+  };
+
+  setCurrentTime();
+  setCurrentYear();
+
+  setInterval(() => {
+    setCurrentTime();
+  }, 1000);
+</script>

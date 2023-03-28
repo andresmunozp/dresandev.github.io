@@ -8,6 +8,8 @@ interface SliderItemProps {
   index: number
   image: string
   description: string
+  repositoryURL: string
+  liveURL: string
 }
 
 const linkIcon = (
@@ -25,7 +27,7 @@ const githubIcon = (
   </svg>
 )
 
-const SliderItem: FC<SliderItemProps> = ({ index, image, description }) => {
+const SliderItem: FC<SliderItemProps> = ({ index, image, description, repositoryURL, liveURL }) => {
   return (
     <>
       <img
@@ -44,14 +46,14 @@ const SliderItem: FC<SliderItemProps> = ({ index, image, description }) => {
             aria-label="Go to live preview"
             title="Live preview"
             className="slider-link"
-            href="#"
+            href={repositoryURL}
           >{linkIcon}</a>
 
           <a
             aria-label="Go to source code"
             title="Source code"
             className="slider-link"
-            href="#"
+            href={liveURL}
           >{githubIcon}</a>
         </div>
       </div>

@@ -1,18 +1,19 @@
 const technologies: string[] = [
   'HTML',
+  'CSS',
+  'JAVASCRIPT',
+  'TYPESCRIPT',
   'REACT',
-  'TAILWIND',
+  'NODE JS',
+  'NEXT JS',
   'GIT',
   'FLUTTER',
   'DART',
-  'JAVASCRIPT',
+  'POSTGRESQL',
   'MONGODB',
-  'CSS',
-  'TYPESCRIPT',
   'SASS',
-  'NODE JS',
-  'NEXT JS',
-  'LEARNING 😉'
+  'TAILWIND',
+  'MORE'
 ]
 
 export default technologies

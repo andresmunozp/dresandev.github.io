@@ -17,7 +17,9 @@ import technologies from "../data/technologies";
     {
       technologies.map((technology) => (
         <li class="skills__li">
-          <span class="skills__text">〽 {technology}</span>
+          <span class="skills__text">
+            <span class="skills__text--marker">•</span> {technology}
+          </span>
         </li>
       ))
     }
@@ -41,5 +43,10 @@ import technologies from "../data/technologies";
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.2em;
+    color: var(--yellow-color);
+  }
+
+  .skills__text--marker {
+    color: var(--white-color);
   }
 </style>
