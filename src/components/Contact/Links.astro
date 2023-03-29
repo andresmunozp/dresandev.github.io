@@ -4,17 +4,25 @@ import LinkIcon from "./LinkIcon.astro";
 
 <ul class="links">
   <li>
-    <a class="links__link" href="#">
+    <a class="links__link" href="https://github.com/dresandev" target="_blank">
       <LinkIcon /> Github
     </a>
   </li>
   <li>
-    <a class="links__link" href="#">
+    <a
+      class="links__link"
+      href="mailto:javiandres.016@correo.com"
+      target="_blank"
+    >
       <LinkIcon /> Email
     </a>
   </li>
   <li>
-    <a class="links__link" href="#">
+    <a
+      class="links__link"
+      href="https://linkedin.com/in/javier-andres-dev"
+      target="_blank"
+    >
       <LinkIcon /> Linkedin
     </a>
   </li>
@@ -32,7 +40,7 @@ import LinkIcon from "./LinkIcon.astro";
     display: flex;
     align-items: center;
     gap: 1rem;
-    font-size: 1.8rem;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
     font-weight: bold;
   }
 </style>

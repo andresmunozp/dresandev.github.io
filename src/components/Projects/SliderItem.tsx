@@ -6,7 +6,7 @@ import './SliderItem.css'
 
 interface SliderItemProps {
   index: number
-  image: string
+  images: string[]
   description: string
   repositoryURL: string
   liveURL: string
@@ -27,15 +27,28 @@ const githubIcon = (
   </svg>
 )
 
-const SliderItem: FC<SliderItemProps> = ({ index, image, description, repositoryURL, liveURL }) => {
+const SliderItem: FC<SliderItemProps> = ({
+  index,
+  images,
+  description,
+  repositoryURL,
+  liveURL
+}) => {
+  const [desktop, mobile] = images
+
   return (
     <>
-      <img
-        className="slider__image"
-        src={image}
-        alt="Project image"
-        loading="lazy"
-      />
+      <picture>
+        <source
+          srcSet={desktop}
+          media="(min-width: 768px)"
+        />
+        <img
+          className="slider__image"
+          src={mobile}
+          alt="Project image"
+          loading="lazy" />
+      </picture>
 
       <div className="slider__info info">
         <span className="info__index">{index} /</span>

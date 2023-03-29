@@ -22,8 +22,8 @@ import { CloseMenuBtn, MenuNavigation, MenuOptions } from "./";
     flex-direction: column;
     justify-content: space-between;
     height: calc(100% + 1rem);
-    background: var(--background-color) url(../../assets/images/bg.webp) no-repeat
-      fixed;
+    background: var(--background-color) url(../../assets/images/bg-mobile.webp)
+      no-repeat fixed;
     background-size: cover;
     border-bottom: 1rem solid var(--primary-color);
     transform: translateY(calc(-100% - 1rem));
@@ -42,4 +42,54 @@ import { CloseMenuBtn, MenuNavigation, MenuOptions } from "./";
     height: max-content;
     border-bottom: 0.2rem solid var(--gray-color-transparent);
   }
+
+  @media screen and (min-width: 768px) {
+    .menu {
+      background-image: url(../../assets/images/bg-desktop.webp);
+    }
+  }
 </style>
+
+<script>
+  const menu = document.querySelector(".menu")!;
+  const menuBtn = document.querySelector(".menu-btn")!;
+  const closeBtn = document.querySelector(".close-btn")!;
+  const optionsLinks = document.querySelectorAll(".links__link");
+  const bodyStyle = document.body.style;
+
+  let scrollY = 0;
+
+  const openMenu = () => {
+    menu.classList.add("menu--active");
+
+    scrollY = window.scrollY;
+
+    bodyStyle.overflow = `hidden`;
+
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      bodyStyle.position = `fixed`;
+      bodyStyle.width = `100%`;
+      bodyStyle.height = `calc(100% + ${scrollY}px)`;
+      bodyStyle.top = `-${scrollY}px`;
+    }
+  };
+
+  const closeMenu = () => {
+    bodyStyle.removeProperty("overflow");
+    bodyStyle.removeProperty("position");
+    bodyStyle.removeProperty("width");
+    bodyStyle.removeProperty("height");
+    bodyStyle.removeProperty("top");
+
+    menu.classList.remove("menu--active");
+    window.scrollTo(0, scrollY);
+  };
+
+  menuBtn.addEventListener("click", openMenu);
+
+  closeBtn.addEventListener("click", closeMenu);
+
+  optionsLinks.forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+</script>

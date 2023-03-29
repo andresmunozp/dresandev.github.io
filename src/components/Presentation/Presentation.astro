@@ -5,22 +5,24 @@ import { TimeAndYear, CVButton } from "../UI/";
 <section class="presentation">
   <div class="presentation__container">
     <div class="presentation__name">JAVIER ANDRES / DRESAN</div>
-    <h1 class="presentation__title">Frontend Developer</h1>
+    <h1 class="presentation__title title">
+      Frontend Developer <span class="title__dot"></span>
+    </h1>
     <p class="presentation__description">
       Hi, I'm Andres, a software developer focused on the frontend, specifically
       on web technologies, based in Colmbia. My mission is to create solutions
       that adapt to the needs of users and clients.
     </p>
+
+    <CVButton />
   </div>
 
-  <CVButton />
   <TimeAndYear />
 </section>
 
 <style>
   .presentation__container {
-    padding-top: 2.5rem;
-    padding-bottom: 5rem;
+    padding: 6rem 0;
   }
 
   .presentation__name {
@@ -32,19 +34,36 @@ import { TimeAndYear, CVButton } from "../UI/";
   .presentation__title {
     position: relative;
     margin-bottom: 2.5rem;
-    width: min-content;
-    font-size: 5.5rem;
+    font-size: clamp(5.5rem, 7vw, 10rem);
     font-weight: bold;
     line-height: 112%;
+    word-break: break-word;
   }
-  .presentation__title::after {
-    content: "";
+
+  .presentation__description {
+    margin-bottom: 2rem;
+  }
+
+  .title__dot {
     position: absolute;
-    right: -1rem;
     bottom: 1rem;
     height: 1.1rem;
     width: 1.1rem;
     background-color: var(--primary-color);
     border-radius: 5rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    .presentation__container {
+      padding: 15rem 0;
+    }
+
+    .presentation__name {
+      font-size: 3rem;
+    }
+
+    .presentation__title {
+      margin-bottom: 5rem;
+    }
   }
 </style>

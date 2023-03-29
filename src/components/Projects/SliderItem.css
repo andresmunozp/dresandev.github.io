@@ -11,7 +11,7 @@
 }
 
 .info__index {
-  font-size: 1.6rem;
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
   font-weight: 700;
   transition: color 0.3s ease;
 }
@@ -22,7 +22,7 @@
 
 .info__description {
   flex-basis: 75%;
-  font-size: 1.6rem;
+  font-size: clamp(1.6rem, 4vw, 3rem);
 }
 
 .info__links {
