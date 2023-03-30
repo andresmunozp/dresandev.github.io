@@ -1,11 +1,7 @@
----
-import LinkIcon from "./LinkIcon.astro";
----
-
 <ul class="links">
   <li>
     <a class="links__link" href="https://github.com/dresandev" target="_blank">
-      <LinkIcon /> Github
+      Github
     </a>
   </li>
   <li>
@@ -14,7 +10,7 @@ import LinkIcon from "./LinkIcon.astro";
       href="mailto:javiandres.016@correo.com"
       target="_blank"
     >
-      <LinkIcon /> Email
+      Email
     </a>
   </li>
   <li>
@@ -23,7 +19,7 @@ import LinkIcon from "./LinkIcon.astro";
       href="https://linkedin.com/in/javier-andres-dev"
       target="_blank"
     >
-      <LinkIcon /> Linkedin
+      Linkedin
     </a>
   </li>
 </ul>
@@ -32,15 +28,32 @@ import LinkIcon from "./LinkIcon.astro";
   .links {
     padding-bottom: 2.5rem;
     display: flex;
-    justify-content: center;
     gap: 2rem;
   }
 
   .links__link {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
-    font-weight: bold;
+    font-size: clamp(1.8rem, 4vw, 2.2rem);
+  }
+
+  @media screen and (min-width: 768px) {
+    .links {
+      padding-bottom: 4rem;
+      gap: 4rem;
+    }
+
+    .links__link::after {
+      content: "";
+      display: block;
+      width: 100%;
+      max-width: 0;
+      height: 0.2rem;
+      background-color: var(--white-color);
+      border-radius: 0.1rem;
+      transition: max-width 0.3s ease-in;
+    }
+
+    .links__link:hover::after {
+      max-width: 100%;
+    }
   }
 </style>

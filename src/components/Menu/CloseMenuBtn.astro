@@ -1,4 +1,4 @@
-<button aria-label="close menu" title="close menu" class="close-btn">
+<button aria-label="close menu" title="Close menu" class="close-btn">
   <span class="close-btn__line close-btn__line--top"></span>
   <span class="close-btn__line close-btn__line--bottom"></span>
 </button>
@@ -25,8 +25,19 @@
   .close-btn__line--top {
     transform: rotate(45deg);
   }
-
   .close-btn__line--bottom {
     transform: rotate(-45deg);
+  }
+
+  @media screen and (min-width: 768px) {
+    .close-btn {
+      width: 5rem;
+      height: 4.5rem;
+    }
+
+    .close-btn__line {
+      top: 1.8rem;
+      height: 0.65rem;
+    }
   }
 </style>

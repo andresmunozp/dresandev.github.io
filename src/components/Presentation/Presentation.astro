@@ -26,7 +26,7 @@ import { TimeAndYear, CVButton } from "../UI/";
   }
 
   .presentation__name {
-    font-size: 1.6rem;
+    font-size: clamp(1.6rem, 2vw, 3rem);
     font-weight: 600;
     color: var(--primary-color);
   }
@@ -34,7 +34,7 @@ import { TimeAndYear, CVButton } from "../UI/";
   .presentation__title {
     position: relative;
     margin-bottom: 2.5rem;
-    font-size: clamp(5.5rem, 7vw, 10rem);
+    font-size: clamp(5.5rem, 8vw, 10rem);
     font-weight: bold;
     line-height: 112%;
     word-break: break-word;
@@ -56,10 +56,6 @@ import { TimeAndYear, CVButton } from "../UI/";
   @media screen and (min-width: 768px) {
     .presentation__container {
       padding: 15rem 0;
-    }
-
-    .presentation__name {
-      font-size: 3rem;
     }
 
     .presentation__title {
