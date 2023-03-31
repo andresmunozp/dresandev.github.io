@@ -1,6 +1,7 @@
 ---
 import { Logo } from "../UI";
-import { CloseMenuBtn, MenuNavigation, MenuFooter } from "./";
+import { CloseMenuBtn, MenuNavigation, MenuOptions } from "./";
+import { Links } from "../UI/";
 ---
 
 <div class="menu">
@@ -9,12 +10,17 @@ import { CloseMenuBtn, MenuNavigation, MenuFooter } from "./";
     <CloseMenuBtn />
   </div>
 
-  <MenuNavigation />
-  <MenuFooter />
+  <div>
+    <MenuNavigation />
+    <MenuOptions />
+  </div>
+
+  <Links />
 </div>
 
 <style>
   .menu {
+    overflow: auto;
     position: fixed;
     inset: 0;
     z-index: 2;
@@ -25,7 +31,7 @@ import { CloseMenuBtn, MenuNavigation, MenuFooter } from "./";
       no-repeat fixed;
     background-size: cover;
     transform: translateX(100%);
-    transition: transform 0.8s ease-in-out;
+    transition: transform 0.5s ease-in-out;
   }
   .menu--active {
     transform: translateX(0);
@@ -36,6 +42,7 @@ import { CloseMenuBtn, MenuNavigation, MenuFooter } from "./";
     justify-content: space-between;
     align-items: center;
     padding: 2.5rem;
+    padding-bottom: 0;
     width: 100%;
     height: max-content;
   }
@@ -47,6 +54,7 @@ import { CloseMenuBtn, MenuNavigation, MenuFooter } from "./";
 
     .menu__header {
       padding: 4rem;
+      padding-bottom: 0;
     }
   }
 </style>

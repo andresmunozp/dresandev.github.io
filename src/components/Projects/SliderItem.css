@@ -7,11 +7,17 @@
 .slider__info {
   margin-top: 2rem;
   display: flex;
-  gap: 1rem;
+  opacity: .5;
+  transition: opacity .3s ease;
+}
+
+.swiper-slide-active .slider__info {
+  opacity: 1;
 }
 
 .info__index {
-  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  margin-right: 1rem;
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
   font-weight: 700;
   transition: color 0.3s ease;
 }
@@ -22,7 +28,7 @@
 
 .info__description {
   flex-basis: 75%;
-  font-size: clamp(1.6rem, 4vw, 3rem);
+  font-size: clamp(1.6rem, 3vw, 3rem);
 }
 
 .info__links {
@@ -30,5 +36,42 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
+}
+
+.slider-link {
+  padding: .5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .slider__info {
+    margin-top: 4rem;
+  }
+
+  .info__index {
+    margin-right: 1.5rem;
+  }
+
+  .info__description {
+    flex-basis: 85%;
+  }
+
+  .link-icon path,
+  .github-icon path {
+    stroke-width: 3;
+  }
+
+  .link-icon,
+  .github-icon {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .link-icon {
+    height: 1.8rem;
+  }
+
+  .info__links {
+    gap: 1.5rem;
+  }
 }

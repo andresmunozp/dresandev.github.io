@@ -13,8 +13,15 @@ import type { SwiperProps } from 'swiper/react'
 
 const swiperProps: SwiperProps = {
   loop: true,
-  spaceBetween: 20,
-  grabCursor: true
+  spaceBetween: 30,
+  breakpoints: {
+    768: {
+      centeredSlides: true,
+      slidesPerView: 1.3,
+      spaceBetween: 50,
+      grabCursor: true
+    }
+  }
 }
 
 const Slider: FC = () => (
