@@ -1,0 +1,65 @@
+<div class="card-container">
+  <div class="card">
+    <p class="card__message">
+      You can swipe to the right or to the left to see more projects.
+    </p>
+    <button class="card__close-btn">
+      <svg
+        width="10"
+        height="10"
+        viewBox="0 0 10 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0.453723 9.52843C0.203139 9.27785 0.203139 8.87157 0.453723 8.62098L8.62074 0.453966C8.87133 0.203382 9.2776 0.203381 9.52819 0.453965C9.77877 0.704549 9.77877 1.11083 9.52819 1.36141L1.36117 9.52843C1.11059 9.77901 0.704308 9.77901 0.453723 9.52843Z"
+          fill="white"></path>
+        <path
+          d="M0.471814 0.47179C0.722398 0.221205 1.12868 0.221205 1.37926 0.47179L9.54628 8.63881C9.79686 8.88939 9.79686 9.29567 9.54628 9.54625C9.29569 9.79684 8.88942 9.79684 8.63883 9.54625L0.471815 1.37924C0.22123 1.12865 0.22123 0.722374 0.471814 0.47179Z"
+          fill="white"></path>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<style>
+  .card-container--close {
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .card {
+    margin-top: 2.5rem;
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    background-color: var(--secondary-color-transparent);
+    border: 0.05rem solid var(--secondary-color);
+    border-radius: 0.3rem;
+    font-size: 1.6rem;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .card__close-btn svg {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  .card__close-btn {
+    padding: 0.5rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    .card-container {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  const card = document.querySelector(".card-container")!;
+
+  card.addEventListener("click", () => {
+    card.classList.add("card-container--close");
+  });
+</script>

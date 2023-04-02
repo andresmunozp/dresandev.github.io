@@ -4,6 +4,7 @@ import Logo from './Logo.astro'
 import TimeAndYear from './TimeAndYear.astro'
 import SoundIcon from './SoundIcon.astro'
 import Links from './Links.astro'
+import AdviceMessage from './AdviceMessage.astro'
 
 export {
   CVButton,
@@ -11,5 +12,6 @@ export {
   TimeAndYear,
   Logo,
   SoundIcon,
-  Links
+  Links,
+  AdviceMessage
 }
