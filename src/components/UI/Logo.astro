@@ -2,12 +2,10 @@
 import { logoDesktop, logoMobile } from "../../assets/icons/";
 ---
 
-<a href="/" aria-label="Go home">
-  <picture>
-    <source srcset={logoDesktop} media="(min-width: 768px)" />
-    <img class="logo" src={logoMobile} alt="dresan logo" />
-  </picture>
-</a>
+<picture>
+  <source srcset={logoDesktop} media="(min-width: 768px)" />
+  <img class="logo" src={logoMobile} alt="dresan logo" />
+</picture>
 
 <style>
   .logo {
