@@ -31,18 +31,6 @@ const projects: Project[] = [
     description: 'The cozy cabin nestled in the woods offered a peaceful retreat from the bustling city life.',
     repositoryURL: '#',
     liveURL: '#'
-  },
-  {
-    images: getProjectImages('project'),
-    description: 'The cozy cabin nestled in the woods offered a peaceful retreat from the bustling city life.',
-    repositoryURL: '#',
-    liveURL: '#'
-  },
-  {
-    images: getProjectImages('project'),
-    description: 'The cozy cabin nestled in the woods offered a peaceful retreat from the bustling city life.',
-    repositoryURL: '#',
-    liveURL: '#'
   }
 ]
 
